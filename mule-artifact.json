@@ -1,0 +1,38 @@
+{
+  "configs": [
+    "inbound-config.xml",
+    "outbound-config.xml",
+    "http-proxy.xml"
+  ],
+  "secureProperties": [
+    "inbound.keystore.password_16168681",
+    "inbound.keystore.keyPassword_16168681",
+    "inbound.truststore.password_16168681",
+    "outbound.keystore.password_16168681",
+    "outbound.keystore.keyPassword_16168681",
+    "outbound.truststore.password_16168681",
+    "anypoint.platform.client_secret_16168681"
+  ],
+  "redeploymentEnabled": true,
+  "name": "org.mule.examples:api-gateway-sample-rest-proxy:3.0.0",
+  "minMuleVersion": "4.1.1",
+  "requiredProduct": "MULE_EE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "com/mulesoft/anypoint/gw/project-revenue-calculator.raml",
+        "com/mulesoft/anypoint/gw/datatypes/RevenueResponse.raml",
+        "com/mulesoft/anypoint/gw/datatypes/effortsCostResponse.raml",
+        "com/mulesoft/anypoint/gw/examples/EffortsCostExample.raml",
+        "com/mulesoft/anypoint/gw/examples/RevenueExample.raml",
+        "config.properties"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

@@ -1,0 +1,36 @@
+#%RAML 1.0
+title: project-revenue-calculator
+baseUri: http://localhost:8081/api
+mediaType: 
+  - application/json
+protocols:
+  - HTTP
+types:
+  EffortCost: !include datatypes/effortsCostResponse.raml
+  Revenue: !include datatypes/RevenueResponse.raml
+/projects:
+  /efforts:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              type: EffortCost[]
+        404:
+          body:
+            properties:
+              statusCode: string
+              message: string
+  /metrics:
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              type: Revenue[]
+        404:
+          body:
+            properties:
+              statusCode: string
+              message: string              
+              
